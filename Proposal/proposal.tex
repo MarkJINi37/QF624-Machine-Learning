@@ -21,29 +21,31 @@
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
 \newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
 \usepackage{epigraph}
-\title{Machine Learning Project Proposal}
-\date{Jun 9th 2019}
-\author{Xicheng XIA}
+\title{Machine Learning Project Proposal\_Group 9}
+\date{Jun 11th 2019}
+\author{Xia Xicheng, Shen Li, Li Feijiao, Wang Yifan, Jin Weiguo}
 \begin{document}
 	\maketitle
-\section{Project description}
-We decided to choose \textit{House Prices: Advanced Regression Techniques} from the Kaggle competition as our project topic. Our aim is to use simple machine learning models such as \textit{Lasso Regression} to obtain a decent result after applying feature engineering technique.\\
+\section{Project Description}
+We decided to choose \textit{House Prices: Advanced Regression Techniques} from the Kaggle competition as our project topic. Our goal is to use simple machine learning models such as \textit{Lasso Regression} to obtain a decent result after applying feature engineering technique.\\
 
-\section{Data Description}
-This competition requires us to predict the exact house price with 79 original features. Train set is $1459\times 79$ with given house prices for training, test set is $1459\times 79$ without knowing house prices.
+\section{Data Structure}
+We are given both training dataset ($1459\times 81$) and test dataset ($1459\times 80$). Training datasets includes 1459 entries with 81 variables, in which 80 are explanatory variables and 1 is explained house price. \
 
-\section{Methods of Research}
+\noindent Test dataset is similar to training dataset except for the absence of house price.
+
+\section{Methodology}
 \begin{itemize}
 	\item[a] Read those kernels;
 	\item[b] Data cleansering. Cope with missing values and abnormal values(median filter, winsorize);
-	\item[c] Single factor exploration;
+	\item[c] Single factor exploration (allows us to narrow our focus on plausibly important factors based on our intuition);
 	\item[d] Feature engineering. Dummies, linear/non-linear transformations;
-	\item[e] Dimention reduction. PCA;
-	\item[f] Scale the data. Normalization/Standarization, max\_min\_scaler.
+	\item[e] Dimension reduction. PCA;
+	\item[f] Scale the data. Normalization/Standardization, max\_min\_scalar.
 	\item[g] Select models and parameters. Lasso/Ridge/SVR, cross-examination/regularization/penalization/learning-rate/iteration-times
 \end{itemize}
 
 
-\section{Our Goal}
-The competition score is measured by the out-of-sample \textit{Root Mean Squared Logarithmic Error}, we expected to at least obatin a score less than 0.15 (ranked around 3000), an optimistic expectation is 0.13 (ranked around 2000).
+\section{Performance Evaluation Criteria}
+Kaggle ranks all the submissions according to their relative performance. The competition score is measured by the out-of-sample \textit{Root Mean Squared Logarithmic Error}. Currently, there are 4652 submissions from all over the world. As beginners in the machine learning field, we would like to set our target reasonably at the ranking of 3000, with a score (error) of less than 0.15. An optimistic target would be 0.13 (ranked around 2000).
 \end{document}
